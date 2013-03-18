@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		6B3332D916F50E45006F418F /* GMTownStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B3332D816F50E45006F418F /* GMTownStore.m */; };
-		6B3332DD16F523EA006F418F /* Towns.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6B3332DC16F523EA006F418F /* Towns.xml */; };
-		6B3332DE16F523EA006F418F /* Towns.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6B3332DC16F523EA006F418F /* Towns.xml */; };
 		6B71079916E5046500510E51 /* AppIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B71079816E5046500510E51 /* AppIcon.png */; };
 		6B71079B16E5053B00510E51 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B71079A16E5053B00510E51 /* Default.png */; };
 		6B84D64E16DFAA7E002D1DCE /* GMModelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B84D64D16DFAA7E002D1DCE /* GMModelController.m */; };
@@ -34,6 +32,7 @@
 		6BA56C4D16DE754100145736 /* GMIndexViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BA56C4C16DE754100145736 /* GMIndexViewController.m */; };
 		6BDA001F16E2A0180054467B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BDA001E16E2A0180054467B /* CoreData.framework */; };
 		6BDA007616E2BE590054467B /* Towns.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6BDA007416E2BE590054467B /* Towns.xcdatamodeld */; };
+		6BE813FE16F74BF700C0E755 /* Towns.csv in Resources */ = {isa = PBXBuildFile; fileRef = 6BE813FD16F74BF700C0E755 /* Towns.csv */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,7 +48,6 @@
 /* Begin PBXFileReference section */
 		6B3332D716F50E45006F418F /* GMTownStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMTownStore.h; sourceTree = "<group>"; };
 		6B3332D816F50E45006F418F /* GMTownStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMTownStore.m; sourceTree = "<group>"; };
-		6B3332DC16F523EA006F418F /* Towns.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Towns.xml; sourceTree = "<group>"; };
 		6B71079816E5046500510E51 /* AppIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon.png; sourceTree = "<group>"; };
 		6B71079A16E5053B00510E51 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		6B84D64C16DFAA7E002D1DCE /* GMModelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMModelController.h; sourceTree = "<group>"; };
@@ -84,6 +82,8 @@
 		6BA56C4C16DE754100145736 /* GMIndexViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GMIndexViewController.m; path = ../GMIndexViewController.m; sourceTree = "<group>"; };
 		6BDA001E16E2A0180054467B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		6BDA007516E2BE590054467B /* Towns.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Towns.xcdatamodel; sourceTree = "<group>"; };
+		6BE813FC16F74B6F00C0E755 /* StateListConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StateListConstants.h; sourceTree = "<group>"; };
+		6BE813FD16F74BF700C0E755 /* Towns.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Towns.csv; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,7 +114,7 @@
 		6B3332DB16F5232F006F418F /* DataFiles */ = {
 			isa = PBXGroup;
 			children = (
-				6B3332DC16F523EA006F418F /* Towns.xml */,
+				6BE813FD16F74BF700C0E755 /* Towns.csv */,
 			);
 			name = DataFiles;
 			sourceTree = "<group>";
@@ -166,6 +166,7 @@
 				6BA56C4C16DE754100145736 /* GMIndexViewController.m */,
 				6B3332D716F50E45006F418F /* GMTownStore.h */,
 				6B3332D816F50E45006F418F /* GMTownStore.m */,
+				6BE813FC16F74B6F00C0E755 /* StateListConstants.h */,
 				6BA56C1C16DE743400145736 /* GMAppDelegate.h */,
 				6BA56C1D16DE743400145736 /* GMAppDelegate.m */,
 				6BA56C2516DE743400145736 /* MainStoryboard.storyboard */,
@@ -289,7 +290,7 @@
 				6BA56C2716DE743400145736 /* MainStoryboard.storyboard in Resources */,
 				6B71079916E5046500510E51 /* AppIcon.png in Resources */,
 				6B71079B16E5053B00510E51 /* Default.png in Resources */,
-				6B3332DD16F523EA006F418F /* Towns.xml in Resources */,
+				6BE813FE16F74BF700C0E755 /* Towns.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,7 +299,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				6BA56C3C16DE743400145736 /* InfoPlist.strings in Resources */,
-				6B3332DE16F523EA006F418F /* Towns.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

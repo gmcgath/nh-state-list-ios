@@ -15,4 +15,6 @@
 
 @interface GMTownStore : NSObject <CHCSVParserDelegate>
 
+- (NSArray *) getTowns;
+
 @end

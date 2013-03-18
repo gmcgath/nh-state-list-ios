@@ -9,11 +9,12 @@
 
 
 #import "GMIndexViewController.h"
-
+#import "GMTownStore.h"
 
 @interface GMIndexViewController () {
 
-NSArray *towns;
+    NSArray *towns;
+    GMTownStore *townStore;
 }
 
 @end
@@ -24,7 +25,7 @@ NSArray *towns;
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        townStore = [[GMTownStore alloc] init];
     } 
     return self;
 }
@@ -35,7 +36,7 @@ NSArray *towns;
 	// Do any additional setup after loading the view.
     // This should come from a "state generator."
     //towns = [NSArray arrayWithObjects:@"Bedford", @"Concord", @"Dover", @"Eaton", nil];
-    towns = [self getTowns];
+    towns = [townStore getTowns];
     
 }
 
