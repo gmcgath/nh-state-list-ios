@@ -7,14 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <CoreData/NSManagedObjectContext.h>
-#import <CoreData/NSPersistentStore.h>
-#import <CoreData/NSPersistentStoreCoordinator.h>
 
 #import "CHCSVParser.h"
 
 @interface GMTownStore : NSObject <CHCSVParserDelegate>
 
+- (void) loadStore;
 - (NSArray *) getTowns;
 
 @end

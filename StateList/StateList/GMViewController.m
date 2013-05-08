@@ -6,6 +6,10 @@
 //  Copyright (c) 2013 mcgath.com. All rights reserved.
 //
 
+/** The top level view controller. Rather ordinary. Really, couldn't it
+     be just a UIViewController?
+ */
+
 #import "GMViewController.h"
 
 @interface GMViewController ()

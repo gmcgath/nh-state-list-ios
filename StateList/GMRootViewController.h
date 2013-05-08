@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
 
-@interface GMRootViewController : UIViewController
+@interface GMRootViewController : UINavigationController
         <UIPageViewControllerDelegate>
 
 // UIPageViewControllerDelegate: https://developer.apple.com/library/ios/#DOCUMENTATION/UIKit/Reference/UIPageViewControllerDelegateProtocolRef/UIPageViewControllerDelegate.html

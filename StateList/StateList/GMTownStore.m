@@ -6,49 +6,22 @@
 //  Copyright (c) 2013 mcgath.com. All rights reserved.
 //
 
-/* The class TownStore manages the persistent store for town data. */
-#import <CoreData/NSManagedObject.h>
-#import <CoreData/NSFetchRequest.h>
-#import <CoreData/NSEntityDescription.h>
+
 
 #import "StateListConstants.h"
 #import "GMTownStore.h"
 #import "GMAppDelegate.h"
-
-@interface Town : NSManagedObject
-
-/* Town name */
-@property (nonatomic) NSString *name;
-
-/* Town population */
-@property (nonatomic) NSInteger pop;
-
-/* Geographic location of the town. Latitude is north and longitude west. */
-@property (nonatomic) NSInteger latDeg;
-@property (nonatomic) NSInteger latMin;
-@property (nonatomic) NSInteger latSec;
-@property (nonatomic) NSInteger longDeg;
-@property (nonatomic) NSInteger longMin;
-@property (nonatomic) NSInteger longSec;
-
-@end
+#import "GMTown.h"
 
 @implementation GMTownStore {
 
-    NSPersistentStore *townStore;
     GMAppDelegate *appDelegate;
-    NSURL *url;
     NSMutableArray *towns;
-    NSEntityDescription *townEntity;
-    NSManagedObjectContext *moc;
-    Town *curTown;
+    GMTown *curTown;
 }
 
 -(id) init:(GMAppDelegate *)appDel {
     appDelegate = appDel;
-    //dataFilePath  = @"DataFiles/TownDB";
-    url = [[NSBundle mainBundle]
-                  URLForResource: dataFilePath withExtension:@"csv"];
     [self checkForUpdates];
     return self;
 }
@@ -63,37 +36,19 @@
 
 /** Return the town array */
 - (NSArray *) getTowns {
-    moc = [appDelegate managedObjectContext];
-    NSFetchRequest *request = [[NSFetchRequest alloc] init];
-    townEntity =
-          [NSEntityDescription entityForName:@"Town" inManagedObjectContext:moc];
-    [request setEntity:townEntity];
-    NSPredicate *predicate = [NSPredicate predicateWithValue:true];
-    [request setPredicate:predicate];
-    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc]
-                                        
-                                        initWithKey:@"town" ascending:YES];
-    [request setSortDescriptors:@[sortDescriptor]];
-    NSError *error;
-    
-    NSArray *array = [moc executeFetchRequest:request error:&error];
-    return array;
+    return towns;
 }
 
 /** Load the persistent object store
  */
 - (void) loadStore {
-    NSPersistentStoreCoordinator *psc = [moc persistentStoreCoordinator];
-    NSError *error = nil;
-    NSDictionary *options =
-                [NSDictionary dictionaryWithObject:[NSNumber numberWithBool:1]
-                                forKey:NSReadOnlyPersistentStoreOption];
-    townStore = [psc addPersistentStoreWithType:NSSQLiteStoreType
-                      configuration:nil
-                                URL:url
-                                options:options
-                                error: &error];
-    if (townStore == nil) {
+    // Getting the bundle this way seems safer than MainBundle
+    NSBundle *bundle = [NSBundle bundleForClass: [self class]];
+    NSString *fullFilePath = [bundle pathForResource:dataFilePath ofType:@"csv"];
+    CHCSVParser *parser = [[CHCSVParser alloc] initWithContentsOfCSVFile:fullFilePath];
+    [parser setDelegate:self];
+    [parser parse];
+    if (towns == nil) {
         [self createStore];
     }
 }
@@ -113,11 +68,16 @@
 
 /** Start of a new line. Create a new Town object */
 - (void)parser:(CHCSVParser *)parser didBeginLine:(NSUInteger)recordNumber {
-    curTown = (Town *)[[NSManagedObject alloc]
-                 initWithEntity:townEntity
-                 insertIntoManagedObjectContext:moc];
-
+    curTown = [[GMTown alloc] init];
 }
+
+/** End of a line. Validate and add the Town object */
+- (void)parser:(CHCSVParser *)parser didEndLine:(NSUInteger)recordNumber {
+    if (curTown.name != nil && curTown.pop > 0) {
+        [towns addObject:curTown];
+    }
+}
+
 
 /** Called after reading a field. */
 - (void)parser:(CHCSVParser *)parser didReadField:(NSString *)field
@@ -126,6 +86,9 @@
     switch (tField) {
         case TownName:
             [curTown setName:field];
+            break;
+        case TownCounty:
+            [curTown setCounty:field];
             break;
         case TownPopulation:
             [curTown setPop:[field integerValue]];

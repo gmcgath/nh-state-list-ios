@@ -20,8 +20,8 @@
 
 
 
-- (NSURL *)applicationDocumentsDirectory;
+//- (NSURL *)applicationDocumentsDirectory;
 
-- (void)saveContext;
+// - (void)saveContext;
 
 @end

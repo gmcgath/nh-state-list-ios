@@ -7,7 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B05186916F8ED4200F901E3 /* GMTownView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B05186816F8ED4200F901E3 /* GMTownView.m */; };
+		6B05186C16F9117700F901E3 /* GMTownNameCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B05186B16F9117700F901E3 /* GMTownNameCell.m */; };
 		6B3332D916F50E45006F418F /* GMTownStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B3332D816F50E45006F418F /* GMTownStore.m */; };
+		6B48824316FB73D6006C4FE1 /* GMOptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B48824216FB73D6006C4FE1 /* GMOptionViewController.m */; };
+		6B48824616FB74B6006C4FE1 /* GMOptionButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B48824516FB74B6006C4FE1 /* GMOptionButton.m */; };
+		6B63DBC016F77F55006A9999 /* GMTown.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B63DBBF16F77F55006A9999 /* GMTown.m */; };
+		6B63DBC316F794EF006A9999 /* GMDataFileTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B63DBC216F794EF006A9999 /* GMDataFileTests.m */; };
+		6B63DBC416F7A3DE006A9999 /* GMTownStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B3332D816F50E45006F418F /* GMTownStore.m */; };
+		6B63DBC516F7A3F8006A9999 /* GMTownStore.h in Sources */ = {isa = PBXBuildFile; fileRef = 6B3332D716F50E45006F418F /* GMTownStore.h */; };
+		6B63DBC616F7A426006A9999 /* CHCSVParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B90212716E16F3000FFF0C9 /* CHCSVParser.m */; };
+		6B63DBC716F7A426006A9999 /* CHCSVParser.h in Sources */ = {isa = PBXBuildFile; fileRef = 6B90212616E16F3000FFF0C9 /* CHCSVParser.h */; };
+		6B63DBC816F7A426006A9999 /* GMTown.h in Sources */ = {isa = PBXBuildFile; fileRef = 6B63DBBE16F77F55006A9999 /* GMTown.h */; };
+		6B63DBC916F7A426006A9999 /* GMTown.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B63DBBF16F77F55006A9999 /* GMTown.m */; };
+		6B63DBCC16F7AADB006A9999 /* Towns.csv in Resources */ = {isa = PBXBuildFile; fileRef = 6B63DBCB16F7AADB006A9999 /* Towns.csv */; };
+		6B63DBD516F7C741006A9999 /* GMTownViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B63DBD416F7C741006A9999 /* GMTownViewController.m */; };
 		6B71079916E5046500510E51 /* AppIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B71079816E5046500510E51 /* AppIcon.png */; };
 		6B71079B16E5053B00510E51 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B71079A16E5053B00510E51 /* Default.png */; };
 		6B84D64E16DFAA7E002D1DCE /* GMModelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B84D64D16DFAA7E002D1DCE /* GMModelController.m */; };
@@ -30,8 +44,10 @@
 		6BA56C3F16DE743400145736 /* StateListTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BA56C3E16DE743400145736 /* StateListTests.m */; };
 		6BA56C4A16DE748E00145736 /* GMRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BA56C4916DE748E00145736 /* GMRootViewController.m */; };
 		6BA56C4D16DE754100145736 /* GMIndexViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BA56C4C16DE754100145736 /* GMIndexViewController.m */; };
+		6BBA75CF173A9CDF002CAEED /* GMMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BBA75CE173A9CDF002CAEED /* GMMapViewController.m */; };
+		6BBA75D1173AD99A002CAEED /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BBA75D0173AD99A002CAEED /* MapKit.framework */; };
+		6BBA75D4173AE8CC002CAEED /* GMMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BBA75D3173AE8CC002CAEED /* GMMapView.m */; };
 		6BDA001F16E2A0180054467B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BDA001E16E2A0180054467B /* CoreData.framework */; };
-		6BDA007616E2BE590054467B /* Towns.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6BDA007416E2BE590054467B /* Towns.xcdatamodeld */; };
 		6BE813FE16F74BF700C0E755 /* Towns.csv in Resources */ = {isa = PBXBuildFile; fileRef = 6BE813FD16F74BF700C0E755 /* Towns.csv */; };
 /* End PBXBuildFile section */
 
@@ -46,8 +62,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6B05186716F8ED4200F901E3 /* GMTownView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMTownView.h; sourceTree = "<group>"; };
+		6B05186816F8ED4200F901E3 /* GMTownView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMTownView.m; sourceTree = "<group>"; };
+		6B05186A16F9117700F901E3 /* GMTownNameCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMTownNameCell.h; sourceTree = "<group>"; };
+		6B05186B16F9117700F901E3 /* GMTownNameCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMTownNameCell.m; sourceTree = "<group>"; };
 		6B3332D716F50E45006F418F /* GMTownStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMTownStore.h; sourceTree = "<group>"; };
 		6B3332D816F50E45006F418F /* GMTownStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMTownStore.m; sourceTree = "<group>"; };
+		6B48824116FB73D6006C4FE1 /* GMOptionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMOptionViewController.h; sourceTree = "<group>"; };
+		6B48824216FB73D6006C4FE1 /* GMOptionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMOptionViewController.m; sourceTree = "<group>"; };
+		6B48824416FB74B6006C4FE1 /* GMOptionButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMOptionButton.h; sourceTree = "<group>"; };
+		6B48824516FB74B6006C4FE1 /* GMOptionButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMOptionButton.m; sourceTree = "<group>"; };
+		6B63DBBE16F77F55006A9999 /* GMTown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMTown.h; sourceTree = "<group>"; };
+		6B63DBBF16F77F55006A9999 /* GMTown.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMTown.m; sourceTree = "<group>"; };
+		6B63DBC116F794EF006A9999 /* GMDataFileTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMDataFileTests.h; sourceTree = "<group>"; };
+		6B63DBC216F794EF006A9999 /* GMDataFileTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMDataFileTests.m; sourceTree = "<group>"; };
+		6B63DBCB16F7AADB006A9999 /* Towns.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Towns.csv; sourceTree = "<group>"; };
+		6B63DBD316F7C741006A9999 /* GMTownViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMTownViewController.h; sourceTree = "<group>"; };
+		6B63DBD416F7C741006A9999 /* GMTownViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMTownViewController.m; sourceTree = "<group>"; };
 		6B71079816E5046500510E51 /* AppIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon.png; sourceTree = "<group>"; };
 		6B71079A16E5053B00510E51 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		6B84D64C16DFAA7E002D1DCE /* GMModelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMModelController.h; sourceTree = "<group>"; };
@@ -80,8 +111,12 @@
 		6BA56C4916DE748E00145736 /* GMRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GMRootViewController.m; path = ../GMRootViewController.m; sourceTree = "<group>"; };
 		6BA56C4B16DE754100145736 /* GMIndexViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GMIndexViewController.h; path = ../GMIndexViewController.h; sourceTree = "<group>"; };
 		6BA56C4C16DE754100145736 /* GMIndexViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GMIndexViewController.m; path = ../GMIndexViewController.m; sourceTree = "<group>"; };
+		6BBA75CD173A9CDF002CAEED /* GMMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMMapViewController.h; sourceTree = "<group>"; };
+		6BBA75CE173A9CDF002CAEED /* GMMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMMapViewController.m; sourceTree = "<group>"; };
+		6BBA75D0173AD99A002CAEED /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		6BBA75D2173AE8CC002CAEED /* GMMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMMapView.h; sourceTree = "<group>"; };
+		6BBA75D3173AE8CC002CAEED /* GMMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMMapView.m; sourceTree = "<group>"; };
 		6BDA001E16E2A0180054467B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		6BDA007516E2BE590054467B /* Towns.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Towns.xcdatamodel; sourceTree = "<group>"; };
 		6BE813FC16F74B6F00C0E755 /* StateListConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StateListConstants.h; sourceTree = "<group>"; };
 		6BE813FD16F74BF700C0E755 /* Towns.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Towns.csv; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -91,6 +126,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BBA75D1173AD99A002CAEED /* MapKit.framework in Frameworks */,
 				6BDA001F16E2A0180054467B /* CoreData.framework in Frameworks */,
 				6BA56C0E16DE743400145736 /* UIKit.framework in Frameworks */,
 				6BA56C1016DE743400145736 /* Foundation.framework in Frameworks */,
@@ -119,9 +155,18 @@
 			name = DataFiles;
 			sourceTree = "<group>";
 		};
+		6B63DBCA16F7AAC0006A9999 /* DataFiles */ = {
+			isa = PBXGroup;
+			children = (
+				6B63DBCB16F7AADB006A9999 /* Towns.csv */,
+			);
+			name = DataFiles;
+			sourceTree = "<group>";
+		};
 		6BA56C0116DE743400145736 = {
 			isa = PBXGroup;
 			children = (
+				6BBA75D0173AD99A002CAEED /* MapKit.framework */,
 				6B71079A16E5053B00510E51 /* Default.png */,
 				6B71079816E5046500510E51 /* AppIcon.png */,
 				6BA56C1316DE743400145736 /* StateList */,
@@ -156,24 +201,39 @@
 			isa = PBXGroup;
 			children = (
 				6B3332DB16F5232F006F418F /* DataFiles */,
-				6B90212716E16F3000FFF0C9 /* CHCSVParser.m */,
+				6BA56C2516DE743400145736 /* MainStoryboard.storyboard */,
 				6B90212616E16F3000FFF0C9 /* CHCSVParser.h */,
-				6BA56C4816DE748E00145736 /* GMRootViewController.h */,
-				6BA56C4916DE748E00145736 /* GMRootViewController.m */,
-				6B84D64C16DFAA7E002D1DCE /* GMModelController.h */,
-				6B84D64D16DFAA7E002D1DCE /* GMModelController.m */,
-				6BA56C4B16DE754100145736 /* GMIndexViewController.h */,
-				6BA56C4C16DE754100145736 /* GMIndexViewController.m */,
-				6B3332D716F50E45006F418F /* GMTownStore.h */,
-				6B3332D816F50E45006F418F /* GMTownStore.m */,
-				6BE813FC16F74B6F00C0E755 /* StateListConstants.h */,
+				6B90212716E16F3000FFF0C9 /* CHCSVParser.m */,
 				6BA56C1C16DE743400145736 /* GMAppDelegate.h */,
 				6BA56C1D16DE743400145736 /* GMAppDelegate.m */,
-				6BA56C2516DE743400145736 /* MainStoryboard.storyboard */,
+				6BA56C4B16DE754100145736 /* GMIndexViewController.h */,
+				6BA56C4C16DE754100145736 /* GMIndexViewController.m */,
+				6BBA75D2173AE8CC002CAEED /* GMMapView.h */,
+				6BBA75D3173AE8CC002CAEED /* GMMapView.m */,
+				6BBA75CD173A9CDF002CAEED /* GMMapViewController.h */,
+				6BBA75CE173A9CDF002CAEED /* GMMapViewController.m */,
+				6B84D64C16DFAA7E002D1DCE /* GMModelController.h */,
+				6B84D64D16DFAA7E002D1DCE /* GMModelController.m */,
+				6B48824416FB74B6006C4FE1 /* GMOptionButton.h */,
+				6B48824516FB74B6006C4FE1 /* GMOptionButton.m */,
+				6B48824116FB73D6006C4FE1 /* GMOptionViewController.h */,
+				6B48824216FB73D6006C4FE1 /* GMOptionViewController.m */,
+				6BA56C4816DE748E00145736 /* GMRootViewController.h */,
+				6BA56C4916DE748E00145736 /* GMRootViewController.m */,
+				6B63DBBE16F77F55006A9999 /* GMTown.h */,
+				6B63DBBF16F77F55006A9999 /* GMTown.m */,
+				6B05186A16F9117700F901E3 /* GMTownNameCell.h */,
+				6B05186B16F9117700F901E3 /* GMTownNameCell.m */,
+				6B3332D716F50E45006F418F /* GMTownStore.h */,
+				6B3332D816F50E45006F418F /* GMTownStore.m */,
+				6B05186716F8ED4200F901E3 /* GMTownView.h */,
+				6B05186816F8ED4200F901E3 /* GMTownView.m */,
+				6B63DBD316F7C741006A9999 /* GMTownViewController.h */,
+				6B63DBD416F7C741006A9999 /* GMTownViewController.m */,
 				6BA56C2816DE743400145736 /* GMViewController.h */,
 				6BA56C2916DE743400145736 /* GMViewController.m */,
+				6BE813FC16F74B6F00C0E755 /* StateListConstants.h */,
 				6BA56C1416DE743400145736 /* Supporting Files */,
-				6BDA007416E2BE590054467B /* Towns.xcdatamodeld */,
 			);
 			path = StateList;
 			sourceTree = "<group>";
@@ -195,9 +255,12 @@
 		6BA56C3716DE743400145736 /* StateListTests */ = {
 			isa = PBXGroup;
 			children = (
+				6B63DBCA16F7AAC0006A9999 /* DataFiles */,
 				6BA56C3D16DE743400145736 /* StateListTests.h */,
 				6BA56C3E16DE743400145736 /* StateListTests.m */,
 				6BA56C3816DE743400145736 /* Supporting Files */,
+				6B63DBC116F794EF006A9999 /* GMDataFileTests.h */,
+				6B63DBC216F794EF006A9999 /* GMDataFileTests.m */,
 			);
 			path = StateListTests;
 			sourceTree = "<group>";
@@ -299,6 +362,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6BA56C3C16DE743400145736 /* InfoPlist.strings in Resources */,
+				6B63DBCC16F7AADB006A9999 /* Towns.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,8 +396,15 @@
 				6BA56C4D16DE754100145736 /* GMIndexViewController.m in Sources */,
 				6B84D64E16DFAA7E002D1DCE /* GMModelController.m in Sources */,
 				6B90212816E16F3000FFF0C9 /* CHCSVParser.m in Sources */,
-				6BDA007616E2BE590054467B /* Towns.xcdatamodeld in Sources */,
 				6B3332D916F50E45006F418F /* GMTownStore.m in Sources */,
+				6B63DBC016F77F55006A9999 /* GMTown.m in Sources */,
+				6B63DBD516F7C741006A9999 /* GMTownViewController.m in Sources */,
+				6B05186916F8ED4200F901E3 /* GMTownView.m in Sources */,
+				6B05186C16F9117700F901E3 /* GMTownNameCell.m in Sources */,
+				6B48824316FB73D6006C4FE1 /* GMOptionViewController.m in Sources */,
+				6B48824616FB74B6006C4FE1 /* GMOptionButton.m in Sources */,
+				6BBA75CF173A9CDF002CAEED /* GMMapViewController.m in Sources */,
+				6BBA75D4173AE8CC002CAEED /* GMMapView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,7 +412,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B63DBC616F7A426006A9999 /* CHCSVParser.m in Sources */,
+				6B63DBC716F7A426006A9999 /* CHCSVParser.h in Sources */,
+				6B63DBC816F7A426006A9999 /* GMTown.h in Sources */,
+				6B63DBC916F7A426006A9999 /* GMTown.m in Sources */,
+				6B63DBC516F7A3F8006A9999 /* GMTownStore.h in Sources */,
+				6B63DBC416F7A3DE006A9999 /* GMTownStore.m in Sources */,
 				6BA56C3F16DE743400145736 /* StateListTests.m in Sources */,
+				6B63DBC316F794EF006A9999 /* GMDataFileTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -464,7 +542,6 @@
 		6BA56C4616DE743400145736 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/StateList.app/StateList";
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
@@ -481,7 +558,6 @@
 		6BA56C4716DE743400145736 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/StateList.app/StateList";
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
@@ -526,19 +602,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		6BDA007416E2BE590054467B /* Towns.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				6BDA007516E2BE590054467B /* Towns.xcdatamodel */,
-			);
-			currentVersion = 6BDA007516E2BE590054467B /* Towns.xcdatamodel */;
-			path = Towns.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 6BA56C0216DE743400145736 /* Project object */;
 }

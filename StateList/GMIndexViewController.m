@@ -9,7 +9,9 @@
 
 
 #import "GMIndexViewController.h"
+#import "GMTownViewController.h"
 #import "GMTownStore.h"
+#import "GMTown.h"
 
 @interface GMIndexViewController () {
 
@@ -21,11 +23,21 @@
 
 @implementation GMIndexViewController
 
+
+- (void) awakeFromNib
+{
+    townStore = [[GMTownStore alloc] init];
+    [townStore loadStore];
+    [self configureToolbarItems];
+}
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         townStore = [[GMTownStore alloc] init];
+        [townStore loadStore];
+        [self configureToolbarItems];
     } 
     return self;
 }
@@ -34,8 +46,6 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    // This should come from a "state generator."
-    //towns = [NSArray arrayWithObjects:@"Bedford", @"Concord", @"Dover", @"Eaton", nil];
     towns = [townStore getTowns];
     
 }
@@ -63,8 +73,9 @@
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         
     }    // Take the town name and give that to the cell
-    NSString* townName = [towns objectAtIndex:indexPath.row];
-    cell.textLabel.text = townName;
+    GMTown *town = [towns objectAtIndex:indexPath.row];
+    NSString* townText = [town name];
+    cell.textLabel.text = townText;
     return cell;
 }
 
@@ -77,7 +88,54 @@
     }
 }
 
+- (void)configureToolbarItems
+{
+    UIBarButtonItem *flexibleSpaceButtonItem = [[UIBarButtonItem alloc]
+                                                initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace
+                                                target:nil action:nil];
+    // Create the bar button item for the segmented control
+    UIBarButtonItem *optionButtonItem = [[UIBarButtonItem alloc]
+                                             initWithTitle:@"Options" style: UIBarButtonItemStyleBordered
+                                                 target:nil
+                                                 action:nil];
+    // Set our toolbar items
+    self.toolbarItems = [NSArray arrayWithObjects:
+                         flexibleSpaceButtonItem,
+                         optionButtonItem,
+                         flexibleSpaceButtonItem,
+                         nil];
+}
 
+/*
+- (void)tableView:(UITableView *)tableView
+             didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSUInteger indexes[1];
+    [indexPath getIndexes:indexes];
+    GMTown *town = [towns objectAtIndex:indexes[0]];
+    //[[self navigationController] pushViewController:someController animated:TRUE];
+    
+    // Shouldn't have to do this. How do I grab the push "segue"?
+   // UIViewController *townView = [[GMTownViewController alloc]
+    //                              initWithNibName:@"Whatsitcalled" bundle:nil];
+}
+ */
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    GMTownViewController *tvc = [segue destinationViewController];
+    UITableView *tableView = [self tableView];
+    NSIndexPath *indexPath = [tableView indexPathForSelectedRow];
+    int row = [indexPath row];
+    GMTown *destTown = [towns objectAtIndex:row];
+    [tvc setTownName:[destTown name]];
+    [tvc setCounty:[destTown county]];
+    [tvc setTownPop:[destTown pop]];
+    [tvc setTownLongDeg:[destTown longDeg]];
+    [tvc setTownLongMin:[destTown longMin]];
+    [tvc setTownLongSec:[destTown longSec]];
+    [tvc setTownLatDeg:[destTown latDeg]];
+    [tvc setTownLatMin:[destTown latMin]];
+    [tvc setTownLatSec:[destTown latSec]];
+}
 
 
 

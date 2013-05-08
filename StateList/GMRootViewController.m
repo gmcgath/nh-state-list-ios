@@ -39,28 +39,33 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     // Configure the page view controller and add it as a child view controller.
+    
+    // I don't actually need a page view controller, do I?
+    /*
     self.pageViewController = [[UIPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStylePageCurl navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
     self.pageViewController = [self.pageViewController init];
     self.pageViewController.delegate = self;
+     */
     
     self.modelController = [[GMModelController alloc] init];
     
     GMIndexViewController *startingViewController = [self.modelController mainController];
     // For the moment we have just one view controller
     
-    NSArray *viewControllers = @[startingViewController];
+/*    NSArray *viewControllers = @[startingViewController];
     [self.pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:NULL];
     // Set the page view controller's bounds using an inset rect so that self's view is visible around the edges of the pages.
     CGRect pageViewRect = self.view.bounds;
     self.pageViewController.view.frame = pageViewRect;
     
     [self.pageViewController didMoveToParentViewController:self];
+  */  
+    // Add the page view controller's gesture recognizers to the book view controller's
+    // view so that the gestures are started more easily.
+    // self.view.gestureRecognizers = self.pageViewController.gestureRecognizers;
     
-    // Add the page view controller's gesture recognizers to the book view controller's view so that the gestures are started more easily.
-    self.view.gestureRecognizers = self.pageViewController.gestureRecognizers;
-    
-    [self addChildViewController:self.pageViewController];
-    [self.view addSubview:self.pageViewController.view];
+//    [self addChildViewController:self.pageViewController];
+//    [self.view addSubview:self.pageViewController.view];
     
 }
 

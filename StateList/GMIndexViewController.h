@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GMIndexViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate>
+@interface GMIndexViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate,
+    UINavigationControllerDelegate>
+
 
 
 @end

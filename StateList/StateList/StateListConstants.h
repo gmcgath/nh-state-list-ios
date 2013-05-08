@@ -10,12 +10,13 @@
 #define StateList_StateListConstants_h
 
 /* The path to the town data file */
-NSString *const dataFilePath = @"DataFiles/TownDB";
+NSString *const dataFilePath = @"Towns";
 
 /* Indices of town file fields */
 typedef enum TownFieldType : NSInteger TownFieldType;
 enum TownFieldType : NSInteger {
     TownName = 0,
+    TownCounty,
     TownPopulation,
     TownLatitudeDeg,
     TownLatitudeMin,
