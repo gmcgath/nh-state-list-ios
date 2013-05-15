@@ -54,6 +54,7 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+    townStore = nil;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView
@@ -106,19 +107,7 @@
                          nil];
 }
 
-/*
-- (void)tableView:(UITableView *)tableView
-             didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSUInteger indexes[1];
-    [indexPath getIndexes:indexes];
-    GMTown *town = [towns objectAtIndex:indexes[0]];
-    //[[self navigationController] pushViewController:someController animated:TRUE];
-    
-    // Shouldn't have to do this. How do I grab the push "segue"?
-   // UIViewController *townView = [[GMTownViewController alloc]
-    //                              initWithNibName:@"Whatsitcalled" bundle:nil];
-}
- */
+
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     GMTownViewController *tvc = [segue destinationViewController];

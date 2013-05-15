@@ -15,7 +15,6 @@
 #import "GMIndexViewController.h"
 
 @interface GMModelController()
-//@property (strong, nonatomic) GMIndexViewController *topController;
 
 
 

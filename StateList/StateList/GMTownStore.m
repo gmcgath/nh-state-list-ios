@@ -27,8 +27,7 @@
 }
 
 /** createStore is called only if there is no existing store and a fresh one
-    is needed. Can the app ship with a default store, or do I need to
-    generate it the first time?
+    is needed. The app ships with a default store, so this may not be needed.
  */
 - (void) createStore {
     
@@ -73,8 +72,17 @@
 
 /** End of a line. Validate and add the Town object */
 - (void)parser:(CHCSVParser *)parser didEndLine:(NSUInteger)recordNumber {
-    if (curTown.name != nil && curTown.pop > 0) {
+    if (curTown.name != nil && curTown.pop >= 0 &&
+        curTown.latDeg > 41 && curTown.latDeg < 46 &&
+        curTown.longDeg > 69 && curTown.longDeg < 73) {
         [towns addObject:curTown];
+    }
+    else if (curTown.pop == 0 && curTown.latDeg == 0 && curTown.longDeg == 0) {
+        // Probably a blank line
+    }
+    else {
+        NSLog([self concat:@"Bad town data: " withString:curTown.name],"%@");
+        
     }
 }
 
@@ -114,6 +122,13 @@
         default:
             break;
     }
+}
+
+/** Simple string concatenation is ridiculous in Objective-C */
+- (NSString*) concat: (NSString*) str1 withString:(NSString*) str2 {
+    NSMutableString *ms = [[NSMutableString alloc] initWithString:str1];
+    [ms appendString:str2];
+    return ms;
 }
 
 @end

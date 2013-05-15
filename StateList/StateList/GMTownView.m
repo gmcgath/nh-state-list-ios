@@ -30,12 +30,17 @@
 - (void) drawRect:(CGRect)rect {
     UIFont *bigFont = [UIFont systemFontOfSize:36.0];
     UIFont *littleFont = [UIFont systemFontOfSize:24.0];
-    CGRect textRect = CGRectMake(0, 20, CGRectGetWidth(rect), 40);
-    [townName drawInRect: textRect withFont: bigFont
-           lineBreakMode: NSLineBreakByTruncatingMiddle
+    CGRect textRect = CGRectMake(0, 20, CGRectGetWidth(rect), 60);
+    UIFont *townFont = bigFont;
+    if ([townName length] > 15) {
+        townFont = littleFont;
+    }
+    [townName drawInRect: textRect withFont: townFont
+           lineBreakMode: NSLineBreakByWordWrapping
            alignment: NSTextAlignmentCenter];
-    
-    textRect = CGRectOffset(textRect, 0, 48);
+
+    textRect = CGRectMake(0, 80, CGRectGetWidth(rect), 40);
+    //textRect = CGRectOffset(textRect, 0, 48);
     [county drawInRect:textRect withFont:littleFont
             lineBreakMode: NSLineBreakByTruncatingMiddle
             alignment: NSTextAlignmentCenter];

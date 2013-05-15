@@ -43,7 +43,7 @@
     centerLocation.latitude = latitude;
     centerLocation.longitude= longitude;
     // Set view region 4 KM on a side centered on the town's nominal location
-    MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(centerLocation, 2000, 2000);
+    MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(centerLocation, 7500, 7500);
     [mapView setRegion:viewRegion animated:YES];
 }
 
