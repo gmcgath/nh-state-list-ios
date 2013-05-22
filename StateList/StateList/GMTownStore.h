@@ -9,10 +9,11 @@
 #import <Foundation/Foundation.h>
 
 #import "CHCSVParser.h"
+#import "GMOptions.h"
 
 @interface GMTownStore : NSObject <CHCSVParserDelegate>
 
-- (void) loadStore;
+- (void) loadStore: (GMOptions *) opts;
 - (NSArray *) getTowns;
 
 @end

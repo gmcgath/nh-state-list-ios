@@ -11,7 +11,7 @@
 		6B05186C16F9117700F901E3 /* GMTownNameCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B05186B16F9117700F901E3 /* GMTownNameCell.m */; };
 		6B3332D916F50E45006F418F /* GMTownStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B3332D816F50E45006F418F /* GMTownStore.m */; };
 		6B48824316FB73D6006C4FE1 /* GMOptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B48824216FB73D6006C4FE1 /* GMOptionViewController.m */; };
-		6B48824616FB74B6006C4FE1 /* GMOptionButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B48824516FB74B6006C4FE1 /* GMOptionButton.m */; };
+		6B50B7311749908800D8C826 /* GMOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B50B7301749908800D8C826 /* GMOptions.m */; };
 		6B63DBC016F77F55006A9999 /* GMTown.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B63DBBF16F77F55006A9999 /* GMTown.m */; };
 		6B63DBC316F794EF006A9999 /* GMDataFileTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B63DBC216F794EF006A9999 /* GMDataFileTests.m */; };
 		6B63DBC416F7A3DE006A9999 /* GMTownStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B3332D816F50E45006F418F /* GMTownStore.m */; };
@@ -49,6 +49,7 @@
 		6BBA75D4173AE8CC002CAEED /* GMMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BBA75D3173AE8CC002CAEED /* GMMapView.m */; };
 		6BDA001F16E2A0180054467B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BDA001E16E2A0180054467B /* CoreData.framework */; };
 		6BE813FE16F74BF700C0E755 /* Towns.csv in Resources */ = {isa = PBXBuildFile; fileRef = 6BE813FD16F74BF700C0E755 /* Towns.csv */; };
+		6BFA8EE2174AE97F00878962 /* GMOptionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFA8EE1174AE97F00878962 /* GMOptionCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,8 +71,8 @@
 		6B3332D816F50E45006F418F /* GMTownStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMTownStore.m; sourceTree = "<group>"; };
 		6B48824116FB73D6006C4FE1 /* GMOptionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMOptionViewController.h; sourceTree = "<group>"; };
 		6B48824216FB73D6006C4FE1 /* GMOptionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMOptionViewController.m; sourceTree = "<group>"; };
-		6B48824416FB74B6006C4FE1 /* GMOptionButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMOptionButton.h; sourceTree = "<group>"; };
-		6B48824516FB74B6006C4FE1 /* GMOptionButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMOptionButton.m; sourceTree = "<group>"; };
+		6B50B72F1749908800D8C826 /* GMOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMOptions.h; sourceTree = "<group>"; };
+		6B50B7301749908800D8C826 /* GMOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMOptions.m; sourceTree = "<group>"; };
 		6B63DBBE16F77F55006A9999 /* GMTown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMTown.h; sourceTree = "<group>"; };
 		6B63DBBF16F77F55006A9999 /* GMTown.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMTown.m; sourceTree = "<group>"; };
 		6B63DBC116F794EF006A9999 /* GMDataFileTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMDataFileTests.h; sourceTree = "<group>"; };
@@ -119,6 +120,9 @@
 		6BDA001E16E2A0180054467B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		6BE813FC16F74B6F00C0E755 /* StateListConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StateListConstants.h; sourceTree = "<group>"; };
 		6BE813FD16F74BF700C0E755 /* Towns.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Towns.csv; sourceTree = "<group>"; };
+		6BFA6BEB174BC0FB000C44DA /* GMOptionViewDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GMOptionViewDelegate.h; sourceTree = "<group>"; };
+		6BFA8EE0174AE97E00878962 /* GMOptionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMOptionCell.h; sourceTree = "<group>"; };
+		6BFA8EE1174AE97F00878962 /* GMOptionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMOptionCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -214,10 +218,13 @@
 				6BBA75CE173A9CDF002CAEED /* GMMapViewController.m */,
 				6B84D64C16DFAA7E002D1DCE /* GMModelController.h */,
 				6B84D64D16DFAA7E002D1DCE /* GMModelController.m */,
-				6B48824416FB74B6006C4FE1 /* GMOptionButton.h */,
-				6B48824516FB74B6006C4FE1 /* GMOptionButton.m */,
+				6BFA8EE0174AE97E00878962 /* GMOptionCell.h */,
+				6BFA8EE1174AE97F00878962 /* GMOptionCell.m */,
+				6B50B72F1749908800D8C826 /* GMOptions.h */,
+				6B50B7301749908800D8C826 /* GMOptions.m */,
 				6B48824116FB73D6006C4FE1 /* GMOptionViewController.h */,
 				6B48824216FB73D6006C4FE1 /* GMOptionViewController.m */,
+				6BFA6BEB174BC0FB000C44DA /* GMOptionViewDelegate.h */,
 				6BA56C4816DE748E00145736 /* GMRootViewController.h */,
 				6BA56C4916DE748E00145736 /* GMRootViewController.m */,
 				6B63DBBE16F77F55006A9999 /* GMTown.h */,
@@ -402,9 +409,10 @@
 				6B05186916F8ED4200F901E3 /* GMTownView.m in Sources */,
 				6B05186C16F9117700F901E3 /* GMTownNameCell.m in Sources */,
 				6B48824316FB73D6006C4FE1 /* GMOptionViewController.m in Sources */,
-				6B48824616FB74B6006C4FE1 /* GMOptionButton.m in Sources */,
 				6BBA75CF173A9CDF002CAEED /* GMMapViewController.m in Sources */,
 				6BBA75D4173AE8CC002CAEED /* GMMapView.m in Sources */,
+				6B50B7311749908800D8C826 /* GMOptions.m in Sources */,
+				6BFA8EE2174AE97F00878962 /* GMOptionCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

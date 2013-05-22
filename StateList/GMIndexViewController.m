@@ -9,14 +9,17 @@
 
 
 #import "GMIndexViewController.h"
+#import "GMOptionViewController.h"
 #import "GMTownViewController.h"
 #import "GMTownStore.h"
 #import "GMTown.h"
+#import "GMOptions.h"
 
 @interface GMIndexViewController () {
 
     NSArray *towns;
     GMTownStore *townStore;
+    GMOptions *options;
 }
 
 @end
@@ -27,7 +30,11 @@
 - (void) awakeFromNib
 {
     townStore = [[GMTownStore alloc] init];
-    [townStore loadStore];
+    options = [[GMOptions alloc] init];
+    [townStore loadStore: options];
+    if (towns == nil) {
+        towns = [townStore getTowns];
+    }
     [self configureToolbarItems];
 }
 
@@ -35,8 +42,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        townStore = [[GMTownStore alloc] init];
-        [townStore loadStore];
+        [self reinit];
         [self configureToolbarItems];
     } 
     return self;
@@ -46,8 +52,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    towns = [townStore getTowns];
-    
+    //towns = [townStore getTowns];
 }
 
 - (void)didReceiveMemoryWarning
@@ -55,12 +60,19 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
     townStore = nil;
+    towns = nil;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView
  numberOfRowsInSection:(NSInteger)section {
     // Number of cells = number of websites
     return [towns count];
+}
+
+/* Implementation of GMOptionViewDelegate */
+- (void) optionsDidChange:(GMOptions *) options {
+    NSLog(@"optionsChanged");
+    [self reinit];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView
@@ -74,6 +86,9 @@
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         
     }    // Take the town name and give that to the cell
+    if (towns == nil) {
+        [self reinit];
+    }
     GMTown *town = [towns objectAtIndex:indexPath.row];
     NSString* townText = [town name];
     cell.textLabel.text = townText;
@@ -89,16 +104,21 @@
     }
 }
 
+- (IBAction) doOptions:(id) sender {
+    NSLog(@"doOptions");
+    [self performSegueWithIdentifier:@"options" sender:sender];
+}
+
 - (void)configureToolbarItems
 {
     UIBarButtonItem *flexibleSpaceButtonItem = [[UIBarButtonItem alloc]
                                                 initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace
                                                 target:nil action:nil];
-    // Create the bar button item for the segmented control
+    // Create the bar button item
     UIBarButtonItem *optionButtonItem = [[UIBarButtonItem alloc]
                                              initWithTitle:@"Options" style: UIBarButtonItemStyleBordered
-                                                 target:nil
-                                                 action:nil];
+                                                 target:self
+                                         action:@selector(doOptions:)];
     // Set our toolbar items
     self.toolbarItems = [NSArray arrayWithObjects:
                          flexibleSpaceButtonItem,
@@ -108,22 +128,46 @@
 }
 
 
+/* Call this whenever we have to reinitialize the town data */
+- (void) reinit
+{
+    townStore = [[GMTownStore alloc] init];
+    [townStore loadStore: options];
+    towns = [townStore getTowns];
+    [self.tableView reloadData];
+}
+
+
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    GMTownViewController *tvc = [segue destinationViewController];
-    UITableView *tableView = [self tableView];
-    NSIndexPath *indexPath = [tableView indexPathForSelectedRow];
-    int row = [indexPath row];
-    GMTown *destTown = [towns objectAtIndex:row];
-    [tvc setTownName:[destTown name]];
-    [tvc setCounty:[destTown county]];
-    [tvc setTownPop:[destTown pop]];
-    [tvc setTownLongDeg:[destTown longDeg]];
-    [tvc setTownLongMin:[destTown longMin]];
-    [tvc setTownLongSec:[destTown longSec]];
-    [tvc setTownLatDeg:[destTown latDeg]];
-    [tvc setTownLatMin:[destTown latMin]];
-    [tvc setTownLatSec:[destTown latSec]];
+    NSLog(@"prepareForSegue: %@", segue.identifier);
+    
+    if([segue.identifier isEqualToString:@"town"]) {
+        GMTownViewController *tvc = [segue destinationViewController];
+        UITableView *tableView = [self tableView];
+        NSIndexPath *indexPath = [tableView indexPathForSelectedRow];
+        int row = [indexPath row];
+    
+        if (towns == nil) {
+            [self reinit];
+        }
+        GMTown *destTown = [towns objectAtIndex:row];
+        [tvc setTownName:[destTown name]];
+        [tvc setCounty:[destTown county]];
+        [tvc setTownPop:[destTown pop]];
+        [tvc setTownLongDeg:[destTown longDeg]];
+        [tvc setTownLongMin:[destTown longMin]];
+        [tvc setTownLongSec:[destTown longSec]];
+        [tvc setTownLatDeg:[destTown latDeg]];
+        [tvc setTownLatMin:[destTown latMin]];
+        [tvc setTownLatSec:[destTown latSec]];
+    }
+    else if([segue.identifier isEqualToString:@"options"]) {
+        GMOptionViewController *ovc = [segue destinationViewController];
+        [ovc setDelegate:self];
+        [ovc setUserOptions:options];
+    }
+
 }
 
 

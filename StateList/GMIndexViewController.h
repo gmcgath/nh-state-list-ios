@@ -7,10 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GMOptionViewDelegate.h"
 
 @interface GMIndexViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate,
-    UINavigationControllerDelegate>
+    UINavigationControllerDelegate, GMOptionViewDelegate>
 
 
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *optionsButton;
 
 @end

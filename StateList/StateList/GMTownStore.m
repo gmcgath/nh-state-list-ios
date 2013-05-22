@@ -12,12 +12,19 @@
 #import "GMTownStore.h"
 #import "GMAppDelegate.h"
 #import "GMTown.h"
+#import "GMOptions.h"
+
+#define DEGREELIMIT1 43
+#define MINUTELIMIT1 5
+#define DEGREELIMIT2 44
+#define MINUTELIMIT2 5
 
 @implementation GMTownStore {
 
     GMAppDelegate *appDelegate;
     NSMutableArray *towns;
     GMTown *curTown;
+    GMOptions *curOptions;
 }
 
 -(id) init:(GMAppDelegate *)appDel {
@@ -40,7 +47,8 @@
 
 /** Load the persistent object store
  */
-- (void) loadStore {
+- (void) loadStore:(GMOptions *)opts {
+    curOptions = opts;        // feels a little shaky, but have to feed it to the parser
     // Getting the bundle this way seems safer than MainBundle
     NSBundle *bundle = [NSBundle bundleForClass: [self class]];
     NSString *fullFilePath = [bundle pathForResource:dataFilePath ofType:@"csv"];
@@ -72,10 +80,10 @@
 
 /** End of a line. Validate and add the Town object */
 - (void)parser:(CHCSVParser *)parser didEndLine:(NSUInteger)recordNumber {
-    if (curTown.name != nil && curTown.pop >= 0 &&
-        curTown.latDeg > 41 && curTown.latDeg < 46 &&
-        curTown.longDeg > 69 && curTown.longDeg < 73) {
-        [towns addObject:curTown];
+    if ([self sanityCheck: curTown]) {
+        if ([self optionsCheck:curTown options:curOptions]) {
+            [towns addObject:curTown];
+        }
     }
     else if (curTown.pop == 0 && curTown.latDeg == 0 && curTown.longDeg == 0) {
         // Probably a blank line
@@ -124,6 +132,39 @@
     }
 }
 
+/* Run a sanity check on a town's data, return true if sane */
+- (BOOL) sanityCheck: (GMTown *) town  {
+    return (town.name != nil && town.pop >= 0 &&
+            town.latDeg > 41 && town.latDeg < 46 &&
+            town.longDeg > 69 && town.longDeg < 73);
+}
+
+/* Check if the town's data satisfy the options */
+- (BOOL) optionsCheck: (GMTown *) town options: (GMOptions *) opts {
+    BOOL result = false;
+    if (opts.showNorth) {
+        if (town.latDeg > DEGREELIMIT2 ||
+            (town.latDeg == DEGREELIMIT2 && town.latMin >= MINUTELIMIT2)) {
+            result = true;
+        }
+    }
+    if (opts.showMiddle) {
+        if ((town.latDeg < DEGREELIMIT2 ||
+            (town.latDeg == DEGREELIMIT2 && town.latMin < MINUTELIMIT2)) &&
+            (town.latDeg > DEGREELIMIT1 ||
+             (town.latDeg == DEGREELIMIT1 && town.latMin >= MINUTELIMIT1))) {
+                result = true;
+            }
+        
+    }
+    if (opts.showSouth) {
+        if ((town.latDeg < DEGREELIMIT1 ||
+             (town.latDeg == DEGREELIMIT1 && town.latMin < MINUTELIMIT1))) {
+            result = true;
+        }
+    }
+    return result;
+}
 /** Simple string concatenation is ridiculous in Objective-C */
 - (NSString*) concat: (NSString*) str1 withString:(NSString*) str2 {
     NSMutableString *ms = [[NSMutableString alloc] initWithString:str1];

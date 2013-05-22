@@ -1,14 +1,17 @@
 //
-//  GMOptionButton.m
+//  GMOptionCell.m
 //  StateList
 //
-//  Created by gmcgath on 3/21/13.
+//  Created by gmcgath on 5/20/13.
 //  Copyright (c) 2013 mcgath.com. All rights reserved.
 //
 
-#import "GMOptionButton.h"
+#import "GMOptionCell.h"
 
-@implementation GMOptionButton
+/** In order to have outlets from prototype cells, it's necessary to
+    subclass the cell so that the outlet is in the class. 
+ */
+@implementation GMOptionCell
 
 - (id)initWithFrame:(CGRect)frame
 {
