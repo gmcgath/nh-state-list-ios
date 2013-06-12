@@ -84,6 +84,7 @@
 		6B71079A16E5053B00510E51 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		6B84D64C16DFAA7E002D1DCE /* GMModelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMModelController.h; sourceTree = "<group>"; };
 		6B84D64D16DFAA7E002D1DCE /* GMModelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMModelController.m; sourceTree = "<group>"; };
+		6B88FF8617693F800025D629 /* StateList copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "StateList copy-Info.plist"; path = "/Users/gmcgath/DevProjects/git/cocoa-state-list/StateList/StateList copy-Info.plist"; sourceTree = "<absolute>"; };
 		6B90212616E16F3000FFF0C9 /* CHCSVParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CHCSVParser.h; path = ../CHCSVParser.h; sourceTree = "<group>"; };
 		6B90212716E16F3000FFF0C9 /* CHCSVParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CHCSVParser.m; path = ../CHCSVParser.m; sourceTree = "<group>"; };
 		6BA56C0A16DE743400145736 /* StateList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StateList.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -177,6 +178,7 @@
 				6BA56C3716DE743400145736 /* StateListTests */,
 				6BA56C0C16DE743400145736 /* Frameworks */,
 				6BA56C0B16DE743400145736 /* Products */,
+				6B88FF8617693F800025D629 /* StateList copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -284,9 +286,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		6BA56C0916DE743400145736 /* StateList */ = {
+		6BA56C0916DE743400145736 /* NHTownList */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6BA56C4216DE743400145736 /* Build configuration list for PBXNativeTarget "StateList" */;
+			buildConfigurationList = 6BA56C4216DE743400145736 /* Build configuration list for PBXNativeTarget "NHTownList" */;
 			buildPhases = (
 				6BA56C0616DE743400145736 /* Sources */,
 				6BA56C0716DE743400145736 /* Frameworks */,
@@ -296,14 +298,14 @@
 			);
 			dependencies = (
 			);
-			name = StateList;
+			name = NHTownList;
 			productName = StateList;
 			productReference = 6BA56C0A16DE743400145736 /* StateList.app */;
 			productType = "com.apple.product-type.application";
 		};
-		6BA56C2F16DE743400145736 /* StateListTests */ = {
+		6BA56C2F16DE743400145736 /* NHTownListTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6BA56C4516DE743400145736 /* Build configuration list for PBXNativeTarget "StateListTests" */;
+			buildConfigurationList = 6BA56C4516DE743400145736 /* Build configuration list for PBXNativeTarget "NHTownListTests" */;
 			buildPhases = (
 				6BA56C2B16DE743400145736 /* Sources */,
 				6BA56C2C16DE743400145736 /* Frameworks */,
@@ -315,7 +317,7 @@
 			dependencies = (
 				6BA56C3616DE743400145736 /* PBXTargetDependency */,
 			);
-			name = StateListTests;
+			name = NHTownListTests;
 			productName = StateListTests;
 			productReference = 6BA56C3016DE743400145736 /* StateListTests.octest */;
 			productType = "com.apple.product-type.bundle";
@@ -342,8 +344,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6BA56C0916DE743400145736 /* StateList */,
-				6BA56C2F16DE743400145736 /* StateListTests */,
+				6BA56C0916DE743400145736 /* NHTownList */,
+				6BA56C2F16DE743400145736 /* NHTownListTests */,
 			);
 		};
 /* End PBXProject section */
@@ -436,7 +438,7 @@
 /* Begin PBXTargetDependency section */
 		6BA56C3616DE743400145736 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 6BA56C0916DE743400145736 /* StateList */;
+			target = 6BA56C0916DE743400145736 /* NHTownList */;
 			targetProxy = 6BA56C3516DE743400145736 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -591,7 +593,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6BA56C4216DE743400145736 /* Build configuration list for PBXNativeTarget "StateList" */ = {
+		6BA56C4216DE743400145736 /* Build configuration list for PBXNativeTarget "NHTownList" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6BA56C4316DE743400145736 /* Debug */,
@@ -600,7 +602,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6BA56C4516DE743400145736 /* Build configuration list for PBXNativeTarget "StateListTests" */ = {
+		6BA56C4516DE743400145736 /* Build configuration list for PBXNativeTarget "NHTownListTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6BA56C4616DE743400145736 /* Debug */,
