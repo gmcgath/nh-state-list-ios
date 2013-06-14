@@ -87,7 +87,7 @@
 		6B88FF8617693F800025D629 /* StateList copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "StateList copy-Info.plist"; path = "/Users/gmcgath/DevProjects/git/cocoa-state-list/StateList/StateList copy-Info.plist"; sourceTree = "<absolute>"; };
 		6B90212616E16F3000FFF0C9 /* CHCSVParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CHCSVParser.h; path = ../CHCSVParser.h; sourceTree = "<group>"; };
 		6B90212716E16F3000FFF0C9 /* CHCSVParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CHCSVParser.m; path = ../CHCSVParser.m; sourceTree = "<group>"; };
-		6BA56C0A16DE743400145736 /* StateList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StateList.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6BA56C0A16DE743400145736 /* NHTownList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NHTownList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BA56C0D16DE743400145736 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		6BA56C0F16DE743400145736 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6BA56C1116DE743400145736 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -103,7 +103,7 @@
 		6BA56C2616DE743400145736 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		6BA56C2816DE743400145736 /* GMViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GMViewController.h; sourceTree = "<group>"; };
 		6BA56C2916DE743400145736 /* GMViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GMViewController.m; sourceTree = "<group>"; };
-		6BA56C3016DE743400145736 /* StateListTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StateListTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6BA56C3016DE743400145736 /* StateListTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = StateListTests.octest; path = NHTownListTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BA56C3116DE743400145736 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		6BA56C3916DE743400145736 /* StateListTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "StateListTests-Info.plist"; sourceTree = "<group>"; };
 		6BA56C3B16DE743400145736 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -185,7 +185,7 @@
 		6BA56C0B16DE743400145736 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6BA56C0A16DE743400145736 /* StateList.app */,
+				6BA56C0A16DE743400145736 /* NHTownList.app */,
 				6BA56C3016DE743400145736 /* StateListTests.octest */,
 			);
 			name = Products;
@@ -300,7 +300,7 @@
 			);
 			name = NHTownList;
 			productName = StateList;
-			productReference = 6BA56C0A16DE743400145736 /* StateList.app */;
+			productReference = 6BA56C0A16DE743400145736 /* NHTownList.app */;
 			productType = "com.apple.product-type.application";
 		};
 		6BA56C2F16DE743400145736 /* NHTownListTests */ = {
@@ -530,10 +530,14 @@
 		6BA56C4316DE743400145736 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "StateList/StateList-Prefix.pch";
 				INFOPLIST_FILE = "StateList/StateList-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -541,10 +545,12 @@
 		6BA56C4416DE743400145736 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Gary McGath (TA8XW8CHV8)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "StateList/StateList-Prefix.pch";
 				INFOPLIST_FILE = "StateList/StateList-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
