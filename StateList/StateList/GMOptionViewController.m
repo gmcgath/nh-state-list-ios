@@ -2,8 +2,8 @@
 //  GMOptionViewController.m
 //  StateList
 //
-//  Created by gmcgath on 3/21/13.
-//  Copyright (c) 2013 mcgath.com. All rights reserved.
+//  Created by Gary McGath on 3/21/13.
+//  Copyright (c) 2013 Gary McGath. All rights reserved.
 //
 
 #import "GMOptionViewController.h"

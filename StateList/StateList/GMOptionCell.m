@@ -2,8 +2,8 @@
 //  GMOptionCell.m
 //  StateList
 //
-//  Created by gmcgath on 5/20/13.
-//  Copyright (c) 2013 mcgath.com. All rights reserved.
+//  Created by Gary McGath on 5/20/13.
+//  Copyright (c) 2013 Gary McGath. All rights reserved.
 //
 
 #import "GMOptionCell.h"

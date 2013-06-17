@@ -2,8 +2,8 @@
 //  GMTownView.m
 //  StateList
 //
-//  Created by gmcgath on 3/19/13.
-//  Copyright (c) 2013 mcgath.com. All rights reserved.
+//  Created by Gary McGath on 3/19/13.
+//  Copyright (c) 2013 Gary McGath. All rights reserved.
 //
 
 #import "GMTownView.h"
@@ -27,10 +27,26 @@
 }
 
 
+
 - (void) drawRect:(CGRect)rect {
-    UIFont *bigFont = [UIFont systemFontOfSize:36.0];
-    UIFont *littleFont = [UIFont systemFontOfSize:24.0];
-    CGRect textRect = CGRectMake(0, 20, CGRectGetWidth(rect), 60);
+    NSInteger height = [self bounds].size.height;
+    UIFont *bigFont;
+    UIFont *littleFont;
+    NSInteger bigLineHeight;
+    NSInteger littleLineHeight;
+    if (height < 330) {
+        bigFont = [UIFont systemFontOfSize:30.0];
+        littleFont = [UIFont systemFontOfSize:20.0];
+        bigLineHeight = 38;
+        littleLineHeight = 25;
+    } else {
+        bigFont = [UIFont systemFontOfSize:36.0];
+        littleFont = [UIFont systemFontOfSize:24.0];
+        bigLineHeight = 42;
+        littleLineHeight = 28;
+    }
+    NSInteger yPos = 20;
+    CGRect textRect = CGRectMake(0, yPos, CGRectGetWidth(rect), yPos + bigLineHeight);
     UIFont *townFont = bigFont;
     if ([townName length] > 15) {
         townFont = littleFont;
@@ -39,23 +55,23 @@
            lineBreakMode: NSLineBreakByWordWrapping
            alignment: NSTextAlignmentCenter];
 
-    textRect = CGRectMake(0, 80, CGRectGetWidth(rect), 40);
-    //textRect = CGRectOffset(textRect, 0, 48);
+    yPos += bigLineHeight;
+    textRect = CGRectMake(0, yPos, CGRectGetWidth(rect), yPos + littleLineHeight);
     [county drawInRect:textRect withFont:littleFont
             lineBreakMode: NSLineBreakByTruncatingMiddle
             alignment: NSTextAlignmentCenter];
 
-    textRect = CGRectOffset(textRect, 0, 28);
+    textRect = CGRectOffset(textRect, 0, littleLineHeight);
     [population drawInRect:textRect withFont:littleFont
              lineBreakMode: NSLineBreakByTruncatingMiddle
                  alignment: NSTextAlignmentCenter];
 
-    textRect = CGRectOffset(textRect, 0, 28);
+    textRect = CGRectOffset(textRect, 0, littleLineHeight);
     [longitude drawInRect:textRect withFont:littleFont
              lineBreakMode: NSLineBreakByTruncatingMiddle
                  alignment: NSTextAlignmentCenter];
 
-    textRect = CGRectOffset(textRect, 0, 28);
+    textRect = CGRectOffset(textRect, 0, littleLineHeight);
     [latitude drawInRect:textRect withFont:littleFont
             lineBreakMode: NSLineBreakByTruncatingMiddle
                 alignment: NSTextAlignmentCenter];

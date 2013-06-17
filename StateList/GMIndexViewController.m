@@ -2,10 +2,10 @@
 //  GMIndexViewController.m
 //  StateList
 //
-//  Created by gmcgath on 2/27/13.
-//  Copyright (c) 2013 mcgath.com. All rights reserved.
+//  Created by Gary McGath on 2/27/13.
+//  Copyright (c) 2013 Gary McGath. All rights reserved.
 //
-//  This class controls the view that lets the user select a state from a list.
+//  This class controls the view that lets the user select a town from a list.
 
 
 #import "GMIndexViewController.h"

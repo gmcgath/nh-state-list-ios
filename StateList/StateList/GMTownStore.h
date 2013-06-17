@@ -2,8 +2,8 @@
 //  GMTownStore.h
 //  StateList
 //
-//  Created by gmcgath on 3/16/13.
-//  Copyright (c) 2013 mcgath.com. All rights reserved.
+//  Created by Gary McGath on 3/16/13.
+//  Copyright (c) 2013 Gary McGath. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

@@ -217,10 +217,10 @@
             </objects>
             <point key="canvasLocation" x="156" y="797"/>
         </scene>
-        <!--Navigation Controller - New Hampshire States-->
+        <!--Navigation Controller - New Hampshire Towns-->
         <scene sceneID="pze-YK-i04">
             <objects>
-                <navigationController title="New Hampshire States" definesPresentationContext="YES" toolbarHidden="NO" id="nTf-Kb-mdV" sceneMemberID="viewController">
+                <navigationController title="New Hampshire Towns" definesPresentationContext="YES" toolbarHidden="NO" id="nTf-Kb-mdV" sceneMemberID="viewController">
                     <toolbarItems/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="DZv-uF-C8T">
@@ -278,6 +278,67 @@
             <point key="canvasLocation" x="727" y="170"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="GMIndexViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GMIndexViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="optionsButton" candidateClass="UIBarButtonItem"/>
+            </relationships>
+        </class>
+        <class className="GMMapView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GMMapView.h"/>
+        </class>
+        <class className="GMMapViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GMMapViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
+            </relationships>
+        </class>
+        <class className="GMOptionCell" superclassName="UICollectionViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GMOptionCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="middleSwitch" candidateClass="UISwitch"/>
+                <relationship kind="outlet" name="northSwitch" candidateClass="UISwitch"/>
+                <relationship kind="outlet" name="southSwitch" candidateClass="UISwitch"/>
+                <relationship kind="outlet" name="theSwitch" candidateClass="UISwitch"/>
+            </relationships>
+        </class>
+        <class className="GMOptionViewController" superclassName="UICollectionViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GMOptionViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="toggleMiddle:" candidateClass="UISwitch"/>
+                <relationship kind="action" name="toggleNorth:" candidateClass="UISwitch"/>
+                <relationship kind="action" name="toggleSouth:" candidateClass="UISwitch"/>
+                <relationship kind="outlet" name="middleSwitch" candidateClass="UISwitch"/>
+                <relationship kind="outlet" name="northSwitch" candidateClass="UISwitch"/>
+                <relationship kind="outlet" name="southSwitch" candidateClass="UISwitch"/>
+            </relationships>
+        </class>
+        <class className="GMTownView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GMTownView.h"/>
+        </class>
+        <class className="GMTownViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GMTownViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="mapButton" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="UICollectionReusableView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionReusableView.h"/>
+        </class>
+        <class className="UICollectionViewCell" superclassName="UICollectionReusableView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewCell.h"/>
+        </class>
+        <class className="UICollectionViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewController.h"/>
+        </class>
+        <class className="UICollectionViewFlowLayout" superclassName="UICollectionViewLayout">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewFlowLayout.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

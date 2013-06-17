@@ -24,8 +24,10 @@
 		6B63DBD516F7C741006A9999 /* GMTownViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B63DBD416F7C741006A9999 /* GMTownViewController.m */; };
 		6B71079916E5046500510E51 /* AppIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B71079816E5046500510E51 /* AppIcon.png */; };
 		6B71079B16E5053B00510E51 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B71079A16E5053B00510E51 /* Default.png */; };
-		6B84D64E16DFAA7E002D1DCE /* GMModelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B84D64D16DFAA7E002D1DCE /* GMModelController.m */; };
 		6B90212816E16F3000FFF0C9 /* CHCSVParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B90212716E16F3000FFF0C9 /* CHCSVParser.m */; };
+		6B9D2730176E3A2A0044BAB0 /* AppIconRetina.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B9D272F176E3A2A0044BAB0 /* AppIconRetina.png */; };
+		6B9D2732176E3D120044BAB0 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B9D2731176E3D120044BAB0 /* Default@2x.png */; };
+		6B9D2734176E3ECE0044BAB0 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B9D2733176E3ECE0044BAB0 /* Default-568h@2x.png */; };
 		6BA56C0E16DE743400145736 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BA56C0D16DE743400145736 /* UIKit.framework */; };
 		6BA56C1016DE743400145736 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BA56C0F16DE743400145736 /* Foundation.framework */; };
 		6BA56C1216DE743400145736 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BA56C1116DE743400145736 /* CoreGraphics.framework */; };
@@ -42,7 +44,6 @@
 		6BA56C3416DE743400145736 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BA56C0F16DE743400145736 /* Foundation.framework */; };
 		6BA56C3C16DE743400145736 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6BA56C3A16DE743400145736 /* InfoPlist.strings */; };
 		6BA56C3F16DE743400145736 /* StateListTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BA56C3E16DE743400145736 /* StateListTests.m */; };
-		6BA56C4A16DE748E00145736 /* GMRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BA56C4916DE748E00145736 /* GMRootViewController.m */; };
 		6BA56C4D16DE754100145736 /* GMIndexViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BA56C4C16DE754100145736 /* GMIndexViewController.m */; };
 		6BBA75CF173A9CDF002CAEED /* GMMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BBA75CE173A9CDF002CAEED /* GMMapViewController.m */; };
 		6BBA75D1173AD99A002CAEED /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BBA75D0173AD99A002CAEED /* MapKit.framework */; };
@@ -82,11 +83,12 @@
 		6B63DBD416F7C741006A9999 /* GMTownViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMTownViewController.m; sourceTree = "<group>"; };
 		6B71079816E5046500510E51 /* AppIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon.png; sourceTree = "<group>"; };
 		6B71079A16E5053B00510E51 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		6B84D64C16DFAA7E002D1DCE /* GMModelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMModelController.h; sourceTree = "<group>"; };
-		6B84D64D16DFAA7E002D1DCE /* GMModelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMModelController.m; sourceTree = "<group>"; };
 		6B88FF8617693F800025D629 /* StateList copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "StateList copy-Info.plist"; path = "/Users/gmcgath/DevProjects/git/cocoa-state-list/StateList/StateList copy-Info.plist"; sourceTree = "<absolute>"; };
 		6B90212616E16F3000FFF0C9 /* CHCSVParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CHCSVParser.h; path = ../CHCSVParser.h; sourceTree = "<group>"; };
 		6B90212716E16F3000FFF0C9 /* CHCSVParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CHCSVParser.m; path = ../CHCSVParser.m; sourceTree = "<group>"; };
+		6B9D272F176E3A2A0044BAB0 /* AppIconRetina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIconRetina.png; sourceTree = "<group>"; };
+		6B9D2731176E3D120044BAB0 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		6B9D2733176E3ECE0044BAB0 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		6BA56C0A16DE743400145736 /* NHTownList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NHTownList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BA56C0D16DE743400145736 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		6BA56C0F16DE743400145736 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -109,8 +111,6 @@
 		6BA56C3B16DE743400145736 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6BA56C3D16DE743400145736 /* StateListTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StateListTests.h; sourceTree = "<group>"; };
 		6BA56C3E16DE743400145736 /* StateListTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StateListTests.m; sourceTree = "<group>"; };
-		6BA56C4816DE748E00145736 /* GMRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GMRootViewController.h; path = ../GMRootViewController.h; sourceTree = "<group>"; };
-		6BA56C4916DE748E00145736 /* GMRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GMRootViewController.m; path = ../GMRootViewController.m; sourceTree = "<group>"; };
 		6BA56C4B16DE754100145736 /* GMIndexViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GMIndexViewController.h; path = ../GMIndexViewController.h; sourceTree = "<group>"; };
 		6BA56C4C16DE754100145736 /* GMIndexViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GMIndexViewController.m; path = ../GMIndexViewController.m; sourceTree = "<group>"; };
 		6BBA75CD173A9CDF002CAEED /* GMMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMMapViewController.h; sourceTree = "<group>"; };
@@ -171,11 +171,14 @@
 		6BA56C0116DE743400145736 = {
 			isa = PBXGroup;
 			children = (
+				6B9D2733176E3ECE0044BAB0 /* Default-568h@2x.png */,
+				6B9D2731176E3D120044BAB0 /* Default@2x.png */,
+				6B9D272F176E3A2A0044BAB0 /* AppIconRetina.png */,
 				6BBA75D0173AD99A002CAEED /* MapKit.framework */,
 				6B71079A16E5053B00510E51 /* Default.png */,
 				6B71079816E5046500510E51 /* AppIcon.png */,
-				6BA56C1316DE743400145736 /* StateList */,
-				6BA56C3716DE743400145736 /* StateListTests */,
+				6BA56C1316DE743400145736 /* NHTowns */,
+				6BA56C3716DE743400145736 /* NHTownsTests */,
 				6BA56C0C16DE743400145736 /* Frameworks */,
 				6BA56C0B16DE743400145736 /* Products */,
 				6B88FF8617693F800025D629 /* StateList copy-Info.plist */,
@@ -203,7 +206,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		6BA56C1316DE743400145736 /* StateList */ = {
+		6BA56C1316DE743400145736 /* NHTowns */ = {
 			isa = PBXGroup;
 			children = (
 				6B3332DB16F5232F006F418F /* DataFiles */,
@@ -218,8 +221,6 @@
 				6BBA75D3173AE8CC002CAEED /* GMMapView.m */,
 				6BBA75CD173A9CDF002CAEED /* GMMapViewController.h */,
 				6BBA75CE173A9CDF002CAEED /* GMMapViewController.m */,
-				6B84D64C16DFAA7E002D1DCE /* GMModelController.h */,
-				6B84D64D16DFAA7E002D1DCE /* GMModelController.m */,
 				6BFA8EE0174AE97E00878962 /* GMOptionCell.h */,
 				6BFA8EE1174AE97F00878962 /* GMOptionCell.m */,
 				6B50B72F1749908800D8C826 /* GMOptions.h */,
@@ -227,8 +228,6 @@
 				6B48824116FB73D6006C4FE1 /* GMOptionViewController.h */,
 				6B48824216FB73D6006C4FE1 /* GMOptionViewController.m */,
 				6BFA6BEB174BC0FB000C44DA /* GMOptionViewDelegate.h */,
-				6BA56C4816DE748E00145736 /* GMRootViewController.h */,
-				6BA56C4916DE748E00145736 /* GMRootViewController.m */,
 				6B63DBBE16F77F55006A9999 /* GMTown.h */,
 				6B63DBBF16F77F55006A9999 /* GMTown.m */,
 				6B05186A16F9117700F901E3 /* GMTownNameCell.h */,
@@ -244,6 +243,7 @@
 				6BE813FC16F74B6F00C0E755 /* StateListConstants.h */,
 				6BA56C1416DE743400145736 /* Supporting Files */,
 			);
+			name = NHTowns;
 			path = StateList;
 			sourceTree = "<group>";
 		};
@@ -261,7 +261,7 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		6BA56C3716DE743400145736 /* StateListTests */ = {
+		6BA56C3716DE743400145736 /* NHTownsTests */ = {
 			isa = PBXGroup;
 			children = (
 				6B63DBCA16F7AAC0006A9999 /* DataFiles */,
@@ -271,6 +271,7 @@
 				6B63DBC116F794EF006A9999 /* GMDataFileTests.h */,
 				6B63DBC216F794EF006A9999 /* GMDataFileTests.m */,
 			);
+			name = NHTownsTests;
 			path = StateListTests;
 			sourceTree = "<group>";
 		};
@@ -363,6 +364,9 @@
 				6B71079916E5046500510E51 /* AppIcon.png in Resources */,
 				6B71079B16E5053B00510E51 /* Default.png in Resources */,
 				6BE813FE16F74BF700C0E755 /* Towns.csv in Resources */,
+				6B9D2730176E3A2A0044BAB0 /* AppIconRetina.png in Resources */,
+				6B9D2732176E3D120044BAB0 /* Default@2x.png in Resources */,
+				6B9D2734176E3ECE0044BAB0 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,9 +405,7 @@
 				6BA56C1A16DE743400145736 /* main.m in Sources */,
 				6BA56C1E16DE743400145736 /* GMAppDelegate.m in Sources */,
 				6BA56C2A16DE743400145736 /* GMViewController.m in Sources */,
-				6BA56C4A16DE748E00145736 /* GMRootViewController.m in Sources */,
 				6BA56C4D16DE754100145736 /* GMIndexViewController.m in Sources */,
-				6B84D64E16DFAA7E002D1DCE /* GMModelController.m in Sources */,
 				6B90212816E16F3000FFF0C9 /* CHCSVParser.m in Sources */,
 				6B3332D916F50E45006F418F /* GMTownStore.m in Sources */,
 				6B63DBC016F77F55006A9999 /* GMTown.m in Sources */,

@@ -1,9 +1,9 @@
 //
 //  GMMapViewController.m
-//  StateList
+//  NH Towns
 //
-//  Created by gmcgath on 5/8/13.
-//  Copyright (c) 2013 mcgath.com. All rights reserved.
+//  Created by Gary McGath on 5/8/13.
+//  Copyright (c) 2013 Gary McGath. All rights reserved.
 //
 
 #import "GMMapViewController.h"

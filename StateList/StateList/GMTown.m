@@ -2,12 +2,13 @@
 //  GMTown.m
 //  StateList
 //
-//  Created by gmcgath on 3/18/13.
-//  Copyright (c) 2013 mcgath.com. All rights reserved.
+//  Created by Gary McGath on 3/18/13.
+//  Copyright (c) 2013 Gary McGath. All rights reserved.
 //
 
 #import "GMTown.h"
 
+/* The town model */
 @implementation GMTown
 
 @synthesize name;

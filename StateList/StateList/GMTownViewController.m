@@ -2,8 +2,8 @@
 //  GMTownViewController.m
 //  StateList
 //
-//  Created by gmcgath on 3/18/13.
-//  Copyright (c) 2013 mcgath.com. All rights reserved.
+//  Created by Gary McGath on 3/18/13.
+//  Copyright (c) 2013 Gary McGath. All rights reserved.
 //
 
 #import "GMTownViewController.h"
@@ -47,6 +47,8 @@ static float dmsToFloat(int deg, int min, int sec) {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     UIView *view = [self view];
+    [view setContentMode: UIViewContentModeRedraw];  // force redraw on rotate
+
     GMTownView *tView = (GMTownView *) view;
     [tView setTownName:townName];
     
